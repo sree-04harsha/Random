@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="ForEach">
+
+        <lightning-button label="Show Data" variant="success" onclick={click}></lightning-button>
+
+        <div class="slds-p-top_small slds-p-left_small">
+            <template if:true={isVisible}>
+                <template for:each={datas} for:item='data'>
+                    <div key={data.id}>
+                        <p>{data.Name} : {data.Location}</p>
+                    </div>
+                </template>
+            </template>
+            <template if:true={isVisible}>
+                <template for:each={datas} for:item='data'>
+                    <div key={data.id} class="slds-p-top_x-small slds-p-left_x-small">
+                        <p>{data.Name} : {data.Location}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

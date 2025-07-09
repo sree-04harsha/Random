@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Iterator">
+        <template iterator:it={list}>
+          
+        
+            <div key={it.value.id}>
+
+                <div if:true={it.first}>
+                    <p>This is before the First Element</p>
+                </div>
+                
+                <p>City : {it.value.city}</p>
+                <p>State: {it.value.state}</p>
+                
+                <div if:true={it.last}>
+                    <p>This  is after the Last Element</p>
+                </div>
+            </div>
+        </template>
+    </lightning-card>    
+</template>

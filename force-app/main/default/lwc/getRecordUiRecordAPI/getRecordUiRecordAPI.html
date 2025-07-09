@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="LDS Ui Record Api (getRecord)">
+
+        <template if:true={contactRec.data}>
+            <p><lightning-formatted-name>{lastName}</lightning-formatted-name></p>
+            <p><lightning-formatted-text>{title}</lightning-formatted-text></p>
+            <p><lightning-formatted-phone>{phone}</lightning-formatted-phone></p>
+        </template>
+    </lightning-card>
+</template>

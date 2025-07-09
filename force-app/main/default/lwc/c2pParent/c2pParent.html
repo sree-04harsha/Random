@@ -1,0 +1,6 @@
+<template>
+    <lightning-card title="child to parent custom event with Data">
+        <p>Message from Child: {childMessage}</p> 
+        <c-c2p-child onmessage={handleMessage}></c-c2p-child>  
+    </lightning-card>
+</template>

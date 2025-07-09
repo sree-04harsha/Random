@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Meta Data Type Example">
+        <template if:true={records}>
+        <template for:each={records} for:item="rec" >
+            <div
+             key={rec}>
+             <p>{rec.	DeveloperName}</p>
+            </div>
+        </template>
+        </template>
+
+        <template if:true={error}>
+             <p>{rec.	DeveloperName}</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<template>
+
+    <lightning-card title={cardTitle}>  <!-- passing the card title field from the js file where Title name is in parent component -->
+        <div class="slds-m-around_medium">
+
+          
+              <p>{number} </p> 
+             <p> {message}</p>
+             <p> {isValid} </p> 
+            
+        </div>
+    </lightning-card>
+
+    <lightning-progress-bar value={progressValue} size="large"></lightning-progress-bar>
+
+
+
+    <!-- using programatic communication -->
+    <lightning-card title="Calling child method from parent component">
+      
+        <div class="slds-m-around_medium">
+
+            <lightning-slider label="Volume" value={val} onchange={changeHandler}></lightning-slider>
+           
+        </div>
+    </lightning-card>
+
+    
+</template>

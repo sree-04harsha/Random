@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Directives (if:true and if:false)">
+        <template if:false={isVisible}>
+
+            
+
+        </template>
+
+        <template if:true={isVisible}>
+                <p>Successfully Visible </p>  
+            <lightning-button onclick={click} label="Hide"></lightning-button>
+
+        </template>
+
+
+        <template if:false={isVisible}>
+            <p>Data Hide </p>  
+            <lightning-button onclick={click} label="Show"></lightning-button>
+
+    </template>
+    </lightning-card>
+
+</template>

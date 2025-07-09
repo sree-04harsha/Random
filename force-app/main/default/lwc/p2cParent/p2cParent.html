@@ -1,0 +1,31 @@
+<template>
+    <!-- passing data from parent to child  simple data -->
+    <c-p2c-child 
+        card-title="Parent To Child Primitive data Component Communication" 
+        number=20
+        message="I am from Parent component"
+        is-valid=true>  <!-- CardTitle Field is in the p2c Alert COmponent(child) and camel case is coverted to kebbab case coz mentioning child in parent -->
+    </c-p2c-child>
+
+
+
+     <!-- parent to child communication by action at parent component -->
+     <lightning-card title="Parent To Child non-Primitive data Component Communication">
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" label="Enter percentage" onkeyup={changeHandler} value={percentag}></lightning-input>
+
+            <c-p2c-child
+                progress-value={percentage}>
+            </c-p2c-child>
+
+        </div>
+    </lightning-card>
+
+    <!-- calling the child method (Slider)from the parent component -->
+    <div class="slds-m-bottom_medium"></div>
+
+    <lightning-button variant="brand" label="Reset Slider" onclick={handleClick} ></lightning-button>
+
+    <c-p2c-child data-id="sliderChild"></c-p2c-child>
+
+</template>

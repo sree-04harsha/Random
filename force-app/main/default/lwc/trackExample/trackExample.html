@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Track Decorator Example">
+
+        <!-- without track -->
+        <lightning-input placeholder="Change Type" label="Without Track" onkeyup={changeMovie}></lightning-input>
+        <!-- <lightning-button label="count++" onclick={clickHandle}></lightning-button> -->
+
+        
+              <p>The {movie.name} film actor is {movie.actor}, It is a {movie.type} movie</p>
+
+
+         <!-- with track -->
+        <lightning-input placeholder="Change Food" label="With Track" onkeyup={changeFood}></lightning-input>
+        <!-- <lightning-button label="count++" onclick={clickHandle}></lightning-button> -->
+
+        
+              <p>{details.name} stays at  {details.place} and his favourite food is {details.food}</p>
+            
+    
+    </lightning-card>
+    
+</template>

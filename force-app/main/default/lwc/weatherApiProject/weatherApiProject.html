@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Weather Application">
+
+        
+            <lightning-input label="Enter the City Name" placeholder="Enter City" onchange={changeHandler}></lightning-input>
+            <lightning-button label="Submit" variant="success" onclick={getWeather}></lightning-button>
+       
+
+        <template if:true={data}>
+            <p> City : {cityName}</p>
+            <p>Current Weather:{currentWeather}</p>
+            <p>Temperature : {temp}</p>
+            <p>Humidity : {humidity}</p>
+        </template>
+        <template if:true={error}>
+            <p>Error:{error}</p>
+        </template>
+    </lightning-card>
+    
+</template>
